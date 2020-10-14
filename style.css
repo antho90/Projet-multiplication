@@ -1,0 +1,40 @@
+body{
+    background-image: url(calcul.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    color: black;
+}
+
+body{
+
+    background-color: #5070ff;
+}
+
+
+.mrg-top{
+
+    margin-top: 12% ;
+}
+
+.mrg-top1{
+
+    margin-top: 15% ;
+    
+}
+
+.police{
+
+    font-family : OCR A Std, monospace
+}
+
+.fs_table{
+
+    font-size: 200%;
+}
+
+
+.red{
+
+    color: red;
+}

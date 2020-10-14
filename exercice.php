@@ -1,4 +1,4 @@
 <?php
 
-$pagetitle = "Révision tables multiplication";
+$pagetitle = "Exercices";
 require_once "header.php";

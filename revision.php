@@ -1,12 +1,12 @@
 
 <?php
 
-$pagetitle = "Révision tables multiplication";
+$pagetitle = "Révisions";
 require_once "header.php";
 ?>
-
-<form class=text-center method="POST" action="revision.php">
-Voulez-vous réviser une ou plusieur tables de multiplication ?
+<section class="mrg-top1">
+<form class="text-center police" method="POST" action="revision.php">
+Voulez-vous réviser une ou plusieurs tables de multiplication ?
 <select name="choix">
     <option value="1">Une seule</option>
     <option value="2">Plusieur</option>
@@ -16,39 +16,34 @@ Voulez-vous réviser une ou plusieur tables de multiplication ?
 </form>
 
 
-<?php var_dump($_POST); if ($_POST['choix']==1): ?>
-   Choisissez un chiffre entre 1 et 10 :   
-         <form method="POST" action="revision.php">
+
+
+
+
+<?php if (!empty($_POST) && isset($_POST["choix"] ) && $_POST['choix']==1): ?>
+   <h3 class="text-center police">Choisissez un chiffre entre 1 et 10 : </h3>  
+         <form class=text-center method="POST" action="revision.php">
              <input type="number" name="chiffre" placeholder="entre 1 et 10">
 
-             <button type="submit" class="btn btn-primary">Choisir</button>
+             <button type="submit" class="btn btn-primary police">Choisir</button>
           </form>
 
-<?php elseif ($_POST['choix']==2): ?>
+
+
+<?php elseif (!empty($_POST) && isset($_POST["choix"] ) && $_POST['choix']==2): ?>
+
+<div class="text-center police">
     Choisissez les tables que vous voulez réviser :
+    <a href="plusieurs_tables.php" target=""> <input type="button" class="btn btn-primary" value="Choisir Tables"> </a>
 
-    
-    
-    <?php for ($i = 1; $i <= 10; $i++) : ?>
-
-<div class="form-check form-check-inline">
-
-    <input class="form-check-input" name="check<?= $i ?>" type="checkbox" value="<?= $i ?>" id="check<?= $i ?>" <?php if (!empty($_POST) && isset($_POST["check$i"]) && $i === intval($_POST["check$i"])) echo "checked"; ?>>
-
-    <label class="form-check-label" for="check<?= $i ?>">
-        <?= $i ?>
-    </label>
 </div>
 
-<?php endfor; ?>
-<button type="submit" class="btn btn-primary">Choisir !</button>
-</div>
-</form>
 
 <?php endif ?>
 
 
-<?php if ($_POST['chiffre'] <=10 ): ?> 
+<div class="text-center police fs_table">
+<?php if (!empty($_POST) && isset($_POST["chiffre"] )&& $_POST['chiffre'] <=10 ): ?>
   <?php $i = $_POST['chiffre'] ; 
        
      Echo 'Table de multiplication de '.$i.'<br>';
@@ -58,8 +53,14 @@ Voulez-vous réviser une ou plusieur tables de multiplication ?
      }
      ?>
 
-    <?php elseif ($_POST['chiffre']>10): ?>
-    Chiffre trop grand! Choisissez un chiffre entre 1 et 10
-      
+    <?php elseif (!empty($_POST) && isset($_POST["chiffre"] )&& $_POST['chiffre']>10): ?>
+    <div class=red>Chiffre trop grand! Choisissez un chiffre entre 1 et 10 </div>
+    
     <?php endif ?>
-                
+    
+    
+ </div> 
+
+    </section>
+
+ 
