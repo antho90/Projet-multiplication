@@ -1,7 +1,6 @@
 body{
-    background-image: url(calcul.jpg);
+    background-image: url(calcul1.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
     background-attachment: fixed;
     color: black;
 }
@@ -31,6 +30,11 @@ body{
 .fs_table{
 
     font-size: 200%;
+}
+
+.fs_rev{
+
+    font-size: 150%;
 }
 
 

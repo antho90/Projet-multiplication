@@ -3,12 +3,12 @@
 $pagetitle = "Révisions";
 require_once "header.php";
 ?>
-
+<section class="mrg-top1">
 <div class="container">
     <form method="post">
-        <div class="form-group police">
+        <div class="form-group police fs_rev text-center">
 
-             Choisissez les tables que vous voulez réviser : 
+             Choisissez les tables que vous voulez réviser :<br><br>
             <?php for ($i = 1; $i <= 10; $i++) : ?>
                
                
@@ -61,5 +61,6 @@ require_once "header.php";
     <?php endforeach;
     endif; ?>
 </div>
+</section>
 <?php
 

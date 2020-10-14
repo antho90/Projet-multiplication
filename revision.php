@@ -5,7 +5,7 @@ $pagetitle = "Révisions";
 require_once "header.php";
 ?>
 <section class="mrg-top1">
-<form class="text-center police" method="POST" action="revision.php">
+<form class="text-center police fs_rev" method="POST" action="revision.php">
 Voulez-vous réviser une ou plusieurs tables de multiplication ?
 <select name="choix">
     <option value="1">Une seule</option>
@@ -21,7 +21,7 @@ Voulez-vous réviser une ou plusieurs tables de multiplication ?
 
 
 <?php if (!empty($_POST) && isset($_POST["choix"] ) && $_POST['choix']==1): ?>
-   <h3 class="text-center police">Choisissez un chiffre entre 1 et 10 : </h3>  
+   <h3 class="text-center police ">Choisissez un chiffre entre 1 et 10 : </h3>  
          <form class=text-center method="POST" action="revision.php">
              <input type="number" name="chiffre" placeholder="entre 1 et 10">
 
@@ -32,7 +32,7 @@ Voulez-vous réviser une ou plusieurs tables de multiplication ?
 
 <?php elseif (!empty($_POST) && isset($_POST["choix"] ) && $_POST['choix']==2): ?>
 
-<div class="text-center police">
+<div class="text-center police fs_rev">
     Choisissez les tables que vous voulez réviser :
     <a href="plusieurs_tables.php" target=""> <input type="button" class="btn btn-primary" value="Choisir Tables"> </a>
 
