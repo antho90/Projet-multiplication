@@ -12,7 +12,7 @@ Choisissez votre exercice :
     <option value="1">Multiplication hazard</option>
     <option value="2">Choix de multiplication</option>
   </select>
-  <button type="submit" class="btn btn-primary">Choisir</button><br><br>
+  <button type="submit" class="btn btn-warning">Choisir</button><br><br>
 
 </form>
 
@@ -20,98 +20,104 @@ Choisissez votre exercice :
    <h3 class="text-center police ">Voici 5 vos multiplications! Bonne chance! : </h3>  
 
 
-   <div class='text-center police fs_table'> 
+           <div class='text-center police fs_table'> 
 
-          <?php 
-          
-           $i = rand(1,10); 
-           $j = rand(1,10); 
-           $f=null;
-          
-           $exo = $i.' x '.$j.' = <br>'; 
-          for ($f = 1; $f <= 1; $f++) {
-          echo $exo; 
-          } 
-          
-          ?>
-
-        <?php 
-          
-          $i = rand(1,10); 
-          $j = rand(1,10); 
-          $f=null;
-         
-          $exo = $i.' x '.$j.' = <br>'; 
-         for ($f = 1; $f <= 1; $f++) {
-         echo $exo; 
-         } 
-         
-         ?>
                    <?php 
+                   $i = rand(1,10); 
+                   $j = rand(1,10); 
+                   $f=null;
           
-          $i = rand(1,10); 
-          $j = rand(1,10); 
-          $f=null;
+                   $exo = $i.' x '.$j.' = <br>'; 
+                   for ($f = 1; $f <= 1; $f++) {
+                   echo $exo; 
+                   } 
          
-          $exo = $i.' x '.$j.' = <br>'; 
-         for ($f = 1; $f <= 1; $f++) {
-         echo $exo; 
-         } 
-         
-         ?>
+                   ?>
+                           <form class=text-center method="POST" action="exercice.php">
+                     <input type="number" name="reponse" placeholder="Votre réponse">
 
-       <?php 
-         
-         $i = rand(1,10); 
-         $j = rand(1,10); 
-         $f=null;
-        
-         $exo = $i.' x '.$j.' = <br>'; 
-        for ($f = 1; $f <= 1; $f++) {
-        echo $exo; 
-        } 
-        
-        ?>
-                  <?php 
+                     <button type="submit" class="btn btn-success police">Valider</button>
+                   </form>
+
+                   <?php 
+                   $i = rand(1,10); 
+                   $j = rand(1,10); 
+                   $f=null;
           
-          $i = rand(1,10); 
-          $j = rand(1,10); 
-          $f=null;
+                   $exo = $i.' x '.$j.' = <br>'; 
+                   for ($f = 1; $f <= 1; $f++) {
+                   echo $exo; 
+                   } 
          
-          $exo = $i.' x '.$j.' = <br>'; 
-         for ($f = 1; $f <= 1; $f++) {
-         echo $exo; 
-         } 
+                   ?>
+                           <form class=text-center method="POST" action="exercice.php">
+                     <input type="number" name="reponse" placeholder="Votre réponse">
+
+                     <button type="submit" class="btn btn-success police">Valider</button>
+                   </form>
+
+                   <?php 
+                   $i = rand(1,10); 
+                   $j = rand(1,10); 
+                   $f=null;
+          
+                   $exo = $i.' x '.$j.' = <br>'; 
+                   for ($f = 1; $f <= 1; $f++) {
+                   echo $exo; 
+                   } 
          
-         ?>
+                   ?>
+                           <form class=text-center method="POST" action="exercice.php">
+                     <input type="number" name="reponse" placeholder="Votre réponse">
 
+                     <button type="submit" class="btn btn-success police">Valider</button>
+                   </form>
 
+                   <?php 
+                   $i = rand(1,10); 
+                   $j = rand(1,10); 
+                   $f=null;
+          
+                   $exo = $i.' x '.$j.' = <br>'; 
+                   for ($f = 1; $f <= 1; $f++) {
+                   echo $exo; 
+                   } 
+         
+                   ?>
+                           <form class=text-center method="POST" action="exercice.php">
+                     <input type="number" name="reponse" placeholder="Votre réponse">
 
+                     <button type="submit" class="btn btn-success police">Valider</button>
+                   </form>
 
-                          
-        <form class=text-center method="POST" action="exercice.php">
-             <input type="number" name="reponse" placeholder="Votre réponse">
+                   <?php 
+                   $i = rand(1,10); 
+                   $j = rand(1,10); 
+                   $f=null;
+          
+                   $exo = $i.' x '.$j.' = <br>'; 
+                   for ($f = 1; $f <= 1; $f++) {
+                   echo $exo; 
+                   } 
+         
+                   ?>
+                           <form class=text-center method="POST" action="exercice.php">
+                     <input type="number" name="reponse" placeholder="Votre réponse">
 
-             <button type="submit" class="btn btn-primary police">Valider</button>
-          </form>
+                     <button type="submit" class="btn btn-success police">Valider</button>
+                   </form>
 
-             <?php $res = $i*$j ?>
         <?php 
                       
- 
-         function resultat($res)
-            {  
-               
-             if (!empty($_POST) && isset($_POST["reponse"] )&& $_POST['reponse'] <=100 );
+             if (!empty($_POST) && isset($_POST["reponse"] )&& $_POST['reponse'] <=100 ); 
              $rep=$_POST["reponse"];
-
+             $res = $i*$j;
                          if ($rep==$res){
                               return true;
                               }elseif ($rep!=$res){
                               return false;
                               }
-            }
-             $resultat = resultat($rep);
+                              
                        var_dump($_POST)
           ?>
                       
@@ -119,8 +125,8 @@ Choisissez votre exercice :
           <?php elseif (!empty($_POST) && isset($_POST["choix"] ) && $_POST['choix']==2): ?>
 
 <div class="text-center police fs_rev">
-    Choisissez les tables que vous voulez réviser :
-       <a href="choix-multiplication.php" target=""> <input type="button" class="btn btn-primary" value="Choisir multiplications"> </a>
+        Choisissez une table pour vous exercer :
+       <a href="choix-multiplication.php" target=""> <input type="button" class="btn btn-warning" value="Choisir tables"> </a>
 
 </div>
 

@@ -2,7 +2,7 @@ body{
     background-image: url(calcul1.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: black;
+    color:rgb(0, 0, 0);
 }
 
 body{
@@ -42,3 +42,4 @@ body{
 
     color: red;
 }
+

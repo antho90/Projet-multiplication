@@ -25,7 +25,7 @@ require_once "header.php";
 
               
             <?php endfor; ?>
-            <button type="submit" class="btn btn-primary">Choisir !</button>
+            <button type="submit" class="btn btn-warning">Choisir !</button>
         </div>
     </form>
     <?php
@@ -62,5 +62,5 @@ require_once "header.php";
     endif; ?>
 </div>
 </section>
-<?php
+
 
